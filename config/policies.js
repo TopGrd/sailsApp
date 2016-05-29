@@ -28,8 +28,18 @@ module.exports.policies = {
 
     '*': true,
     'user': {
+        '*': false,
+
         'findOne': true,
+
         'create': ['canCreate']
+    },
+    'UserController': {
+        'login': true
+    },
+    'EvilController': {
+        'renderImg': ['sessionAuth'],
+        'renderDetail': ['sessionAuth']
     }
 
 

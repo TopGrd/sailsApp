@@ -15,11 +15,12 @@ module.exports = {
             if (err) console.log(err);
             if (!user) {
                 console.log("密码或用户名错误");
+                return res.forbidden('用户名或密码错误！');
             }
             else {
                 console.log(user);
-                req.session.canCreate = true;
-                res.redirect('/create');
+                req.session.authenticated = true;
+                res.redirect('/yaya');
             }
 
         })
