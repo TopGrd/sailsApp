@@ -54,8 +54,13 @@ module.exports.routes = {
     'post /boot': {
         controller: 'UserController',
         action: 'login'
-    }
-    /*'get /getVideo': 'VideoController.getVideo'*/
+    },
+    'get /create': {
+        view: 'create'
+    },
+    'post /create': 'UserController.create',
+    'get /yaya': 'EvilController.renderImg',
+    'get /yaya/:id': 'EvilController.renderDetail'
 
     /***************************************************************************
      *                                                                          *

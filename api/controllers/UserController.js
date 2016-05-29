@@ -19,7 +19,7 @@ module.exports = {
             else {
                 console.log(user);
                 req.session.canCreate = true;
-                res.redirect('/video');
+                res.redirect('/create');
             }
 
         })
