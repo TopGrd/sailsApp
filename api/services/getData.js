@@ -1,14 +1,15 @@
 var request = require('request');
 var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
+var urlConfig = require('../../urlConfig')
 var urls = [];
 var images = [];
 var titles = [];
 var ids = [];
 var hrefs = [];
-var url = 'http://www.ituba.cc/sexy/';
+var url = urlConfig.url;
 var options = {
-    url: 'http://www.ituba.cc/sexy/',
+    url: urlConfig.url,
     encoding: null, //这里表示在抓取网页时不要对接收到的数据做任何转换
     headers: {
         'User-Agent': 'request'
