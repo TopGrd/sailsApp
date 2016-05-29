@@ -6,13 +6,7 @@
  */
 
 
-var source = 'http://k.syasn.com/j';
-var options = {
-    url: 'http://2mn.tv/j',
-    headers: {
-        'User-Agent': 'request'
-    }
-};
+var source = require('../../urlConfig').videoUrl;
 
 
 module.exports = {
