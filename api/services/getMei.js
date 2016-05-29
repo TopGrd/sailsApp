@@ -12,9 +12,9 @@ var Main = {
         var ids = [];
         var hrefs = [];
         var total = [];
-        var url = urlConfig.siurl;
+        var url = urlConfig.url;
         var urls = [];
-        var requrl = urlConfig.siurl + '/p' + currentPage + '.html';
+        var requrl = urlConfig.url + '/p' + currentPage + '.html';
         var options = {
             url: requrl,
             encoding: null, //这里表示在抓取网页时不要对接收到的数据做任何转换

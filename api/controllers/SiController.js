@@ -1,3 +1,10 @@
+/**
+ * SiController
+ *
+ * @description :: Server-side logic for managing sis
+ * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ */
+
 var rp = require('request-promise');
 var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
@@ -7,14 +14,14 @@ module.exports = {
         console.log(req.params);
         var hash = 'yaya/index';
         var page = req.params.page;
-        getMei.getMM(page, function (result) {
+        getData.getMM(page, function (result) {
             result.page = page;
             res.render(hash, result);
         })
     },
     renderDetail: function (req, res) {
         var page = req.params.page;
-        getMei.getMM(page, function (result) {
+        getData.getMM(page, function (result) {
 
             console.log(result);
             var url = result.hrefs[req.params.id];

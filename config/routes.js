@@ -36,10 +36,6 @@ module.exports.routes = {
         view: 'homepage'
     },
     'get /hello': 'HelloController.sayHello',
-    "/girls": {
-        controller: 'GirlsController',
-        action: 'getPic'
-    },
     'get /register': {
         view: 'register'
     },
@@ -58,9 +54,15 @@ module.exports.routes = {
     'get /create': {
         view: 'create'
     },
+    'get /select': {
+        view: 'select'
+    },
     'post /create': 'UserController.create',
-    'get /yaya': 'EvilController.renderImg',
-    'get /yaya/:id': 'EvilController.renderDetail'
+    'get /yaya/:page': 'EvilController.renderImg',
+    'get /yaya/:page/:id': 'EvilController.renderDetail',
+    'get /si/:page': 'SiController.renderImg',
+    'get /si/:page/:id': 'SiController.renderDetail'
+
 
     /***************************************************************************
      *                                                                          *

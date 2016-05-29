@@ -40,6 +40,10 @@ module.exports.policies = {
     'EvilController': {
         'renderImg': ['sessionAuth'],
         'renderDetail': ['sessionAuth']
+    },
+    'SiController': {
+        'renderImg': ['sessionAuth'],
+        'renderDetail': ['sessionAuth']
     }
 
 

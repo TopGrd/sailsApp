@@ -20,7 +20,8 @@ module.exports = {
             else {
                 console.log(user);
                 req.session.authenticated = true;
-                res.redirect('/yaya');
+                //res.redirect('/yaya/1');
+                res.redirect('/select');
             }
 
         })
